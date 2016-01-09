@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.milind.mapplication3">
+
+    <!-- Include required permissions for Google Mobile Ads to run. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Splash"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity1"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="com.example.milind.mapplication3.MAINACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".display_message"
+            android:label="@string/title_activity_display_message"
+            android:parentActivityName=".MainActivity1"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.milind.mapplication3.MainActivity1" />
+        </activity>
+        <activity
+            android:name=".fill_sudoku"
+            android:label="@string/title_activity_fill_sudoku"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".NextScreen"
+            android:label="@string/title_activity_next_screen"
+            android:parentActivityName=".display_message"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.milind.mapplication3.display_message" />
+        </activity>
+        <activity
+            android:name=".data_main"
+            android:label="data main"
+            android:parentActivityName=".MainActivity1">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.milind.mapplication3.MainActivity1" />
+        </activity>
+        <activity
+            android:name=".DisplayContact"
+            android:label="data main"
+            android:parentActivityName=".data_main">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.milind.mapplication3.data_main" />
+        </activity>
+        <activity
+            android:name=".ItemListActivity"
+            android:label="@string/title_item_list"
+            android:parentActivityName=".MainActivity1"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.milind.mapplication3.MainActivity1" />
+        </activity>
+        <activity
+            android:name=".ItemDetailActivity"
+            android:label="@string/title_item_detail"
+            android:parentActivityName=".ItemListActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.milind.mapplication3.ItemListActivity" />
+        </activity>
+        <activity
+            android:name=".Navigation"
+            android:label="@string/title_activity_navigation"
+            android:parentActivityName=".MainActivity1"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.milind.mapplication3.MainActivity1" />
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".MainActivity1">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.milind.mapplication3.MainActivity1" />
+        </activity>
+        <activity
+            android:name=".ScrollingActivity"
+            android:label="@string/title_activity_scrolling"
+            android:parentActivityName=".MainActivity1"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.milind.mapplication3.MainActivity1" />
+        </activity>
+        <!-- This meta-data tag is required to use Google Play Services. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".Interstitial_ad"
+            android:label="@string/title_activity_interstitial_ad"
+            android:parentActivityName=".display_message">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.milind.mapplication3.display_message" />
+        </activity>
+        <!-- Include the AdActivity configChanges and theme. -->
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent" />
+    </application>
+
+</manifest>
